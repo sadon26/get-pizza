@@ -1,0 +1,182 @@
+@import "./variables";
+@import "../mixins/index.scss";
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Larsseit";
+  color: $black;
+}
+
+body {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+label {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  margin: 0;
+
+  &.fs-large {
+    font-size: 2rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2em;
+  margin: 0;
+  font-weight: bold;
+  color: #141414;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 48px;
+  color: #3f4b6b;
+
+  @include query("mobile") {
+    font-size: 2.4rem;
+  }
+
+  &.fs-large {
+    font-size: 4.8rem;
+    font-family: "Larsseit";
+
+    @include query("mobile") {
+      font-size: 4rem !important;
+    }
+    &-sm {
+      @include query("mobile") {
+        font-size: 3.2rem !important;
+      }
+    }
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+span {
+  font-size: 1.6rem;
+  line-height: 160%;
+  color: #555555;
+
+  @include query("mobile") {
+    font-size: 1.4rem;
+  }
+}
+
+button {
+  appearance: none;
+  background: transparent;
+  text-transform: none;
+  border: none;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+[disabled] {
+  cursor: not-allowed;
+}
+[readonly] {
+  outline: none;
+  opacity: 0.5;
+}
+
+blockquote {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+textarea {
+  border: 1px solid #a1a4b1;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

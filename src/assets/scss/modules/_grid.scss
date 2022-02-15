@@ -1,0 +1,45 @@
+@use "../mixins/mixins.scss" as *;
+
+.grid {
+  display: grid;
+  &__layout {
+    @extend .grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+    @include grid-generator(12);
+    &--10 {
+      grid-template-columns: repeat(10, 1fr);
+      @include grid-generator(10);
+    }
+
+    @for $i from 1 through 5 {
+      &.gap-#{$i} {
+        grid-gap: #{$i}rem;
+      }
+    }
+
+    @for $i from 1 through 20 {
+      @include query("mobile") {
+        &.m-row-gap-#{$i} {
+          grid-row-gap: #{$i}rem !important;
+        }
+
+        &.m-col-gap-#{$i} {
+          grid-column-gap: #{$i}rem !important;
+        }
+
+        &.no-col-gap {
+          grid-column-gap: 0 !important;
+        }
+
+        &.no-row-gap {
+          grid-column-gap: 0 !important;
+        }
+      }
+    }
+  }
+
+  &--no-gutter {
+    grid-gap: 0;
+  }
+}

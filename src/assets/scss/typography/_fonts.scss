@@ -1,0 +1,38 @@
+@use "sass:math" as *;
+
+@for $i from 1 through 100 {
+  .fs-#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+
+$sfFonts: (
+  100:
+    "https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff",
+  200:
+    "https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff",
+  300:
+    "https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff",
+  400:
+    "https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff",
+  500:
+    "https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff",
+  600:
+    "https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff",
+  700:
+    "https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff",
+);
+
+@each $fontWeight, $fontURL in $sfFonts {
+  @font-face {
+    font-family: "Larsseit";
+    font-weight: $fontWeight;
+    src: url($fontURL);
+  }
+}
+
+@for $i from 1 through 7 {
+  .fw-#{$i * 100} {
+    font-weight: $i * 100 !important;
+  }
+}

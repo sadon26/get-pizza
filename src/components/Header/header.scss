@@ -1,0 +1,14 @@
+.nav {
+  &__link {
+    transition: 0.3s all ease-out;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: rgb(255, 149, 50);
+    }
+  }
+}

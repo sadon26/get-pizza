@@ -1,0 +1,30 @@
+@import "../base/variables";
+
+@mixin grid-generator($grid-columns, $columnType: col) {
+  @if $columnType == mobile {
+    $columnType: m-col;
+  }
+
+  @for $i from 1 through $grid-columns {
+    .#{$columnType}-#{$i} {
+      &.u-above {
+        position: relative;
+        z-index: 10;
+      }
+      grid-column: span $i;
+    }
+  }
+}
+
+// media queries mixins
+@mixin query($breakpoint, $type: max) {
+  // If $breakpoint is a key that exists in
+  // $breakpoints, get and use the value
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint: map-get($breakpoints, $breakpoint);
+  }
+
+  @media screen and (#{$type}-width: #{$breakpoint}) {
+    @content;
+  }
+}

@@ -1,0 +1,39 @@
+.text {
+  &__light-grey {
+    color: #909090;
+  }
+  &__white {
+    color: #fff;
+  }
+  &__black {
+    color: #222222;
+  }
+  &__orange {
+    color: rgb(255, 149, 50);
+  }
+  &__mid-grey {
+    color: #858585;
+  }
+  &__dark-grey {
+    color: #505565;
+  }
+  &-underline {
+    text-decoration: underline;
+  }
+  &-xs {
+    font-size: 12px;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-bold {
+    font-weight: bold;
+  }
+  &-capitalize {
+    text-transform: capitalize;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

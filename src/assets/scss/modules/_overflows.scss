@@ -1,0 +1,15 @@
+$overflows: ("scroll", "hidden", "auto");
+
+@each $overflow in $overflows {
+  .o {
+    &-#{$overflow} {
+      overflow: #{$overflow};
+    }
+    &x-#{$overflow} {
+      overflow-x: #{$overflow};
+    }
+    &y-#{$overflow} {
+      overflow-y: #{$overflow};
+    }
+  }
+}

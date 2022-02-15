@@ -1,0 +1,121 @@
+@for $i from 0 through 25 {
+  .p {
+    &-#{$i} {
+      padding: #{$i}rem !important;
+    }
+    &y-#{$i} {
+      padding-top: #{$i}rem !important;
+      padding-bottom: #{$i}rem !important;
+    }
+    &x-#{$i} {
+      padding-left: #{$i}rem !important;
+      padding-right: #{$i}rem !important;
+    }
+    &t-#{$i} {
+      padding-top: #{$i}rem !important;
+    }
+    &b-#{$i} {
+      padding-bottom: #{$i}rem !important;
+    }
+    &l-#{$i} {
+      padding-left: #{$i}rem !important;
+    }
+    &r-#{$i} {
+      padding-right: #{$i}rem !important;
+    }
+  }
+  .m {
+    &-#{$i} {
+      margin: #{$i}rem !important;
+    }
+    &y-#{$i} {
+      margin-top: #{$i}rem !important;
+      margin-bottom: #{$i}rem !important;
+    }
+    &x-#{$i} {
+      margin-left: #{$i}rem !important;
+      margin-right: #{$i}rem !important;
+    }
+    &t-#{$i} {
+      margin-top: #{$i}rem !important;
+    }
+    &b-#{$i} {
+      margin-bottom: #{$i}rem !important;
+    }
+    &l-#{$i} {
+      margin-left: #{$i}rem !important;
+    }
+    &r-#{$i} {
+      margin-right: #{$i}rem !important;
+    }
+  }
+  .b {
+    &-#{$i} {
+      border: #{$i}px solid #f0f1f3 !important;
+    }
+    &y-#{$i} {
+      border-top: #{$i}px solid #f0f1f3 !important;
+      border-bottom: #{$i}px solid #f0f1f3 !important;
+    }
+    &x-#{$i} {
+      border-left: #{$i}px solid #f0f1f3 !important;
+      border-right: #{$i}px solid #f0f1f3 !important;
+    }
+    &t-#{$i} {
+      border-top: #{$i}px solid #f0f1f3 !important;
+    }
+    &b-#{$i} {
+      border-bottom: #{$i}px solid #f0f1f3 !important;
+    }
+    &l-#{$i} {
+      border-left: #{$i}px solid #f0f1f3 !important;
+    }
+    &r-#{$i} {
+      border-right: #{$i}px solid #f0f1f3 !important;
+    }
+  }
+}
+
+@for $i from 1 through 50 {
+  .w {
+    &-#{$i} {
+      width: #{$i}rem !important;
+    }
+  }
+  .h {
+    &-#{$i} {
+      height: #{$i}rem !important;
+    }
+  }
+}
+
+.u {
+  &-relative {
+    position: relative;
+  }
+  &-absolute {
+    position: absolute;
+  }
+  &-above {
+    z-index: 20 !important;
+    position: relative;
+  }
+}
+
+.auto {
+  &-mt {
+    margin-top: auto;
+  }
+  &-mb {
+    margin-bottom: auto;
+  }
+  &-ml {
+    margin-left: auto;
+  }
+  &-mr {
+    margin-right: auto;
+  }
+  &-my {
+    margin: 0 auto;
+  }
+}

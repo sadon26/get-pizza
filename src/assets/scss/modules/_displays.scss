@@ -1,0 +1,20 @@
+@use "../mixins/index.scss" as *;
+
+$displays: (block, inline-flex, none, inline-block);
+
+@each $display in $displays {
+  .d-#{$display} {
+    display: $display;
+  }
+  .m-d-#{$display} {
+    @include query("mobile") {
+      display: $display !important;
+    }
+  }
+}
+
+@for $i from 1 through 30 {
+  .z-#{$i} {
+    z-index: $i !important;
+  }
+}
