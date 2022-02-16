@@ -13,3 +13,25 @@
     $delay: $delay + 0.2;
   }
 }
+
+@keyframes fade-in-from-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.98);
+    position: relative;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    position: relative;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

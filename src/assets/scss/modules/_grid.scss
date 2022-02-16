@@ -19,15 +19,14 @@
     }
 
     @for $i from 1 through 20 {
+      &.row-gap-#{$i} {
+        grid-row-gap: #{$i}rem !important;
+      }
+
+      &.col-gap-#{$i} {
+        grid-column-gap: #{$i}rem !important;
+      }
       @include query("mobile") {
-        &.m-row-gap-#{$i} {
-          grid-row-gap: #{$i}rem !important;
-        }
-
-        &.m-col-gap-#{$i} {
-          grid-column-gap: #{$i}rem !important;
-        }
-
         &.no-col-gap {
           grid-column-gap: 0 !important;
         }

@@ -1,13 +1,13 @@
-import React, { FC, ReactChild } from "react";
+import React, { FC, ReactNode } from "react";
 import Header from "../components/Header";
 
 interface Props {
-  children: ReactChild;
+  children: ReactNode;
 }
 
 const PageLayout: FC<Props> = ({ children }: Props) => {
   return (
-    <div className="px-20">
+    <div className="px-15">
       <Header />
       {children}
     </div>
