@@ -4,7 +4,6 @@ import React, {
   useContext,
   useState,
   useEffect,
-  useRef,
 } from "react";
 
 const CartContext = createContext<any>({});
@@ -39,8 +38,13 @@ const CartContextProvider = ({ children }: { children: ReactNode }) => {
     alert("Cart updated");
   };
 
+  const removeFromCart = (name: string) => {
+    const filteredCart = cart.filter((item: any) => item.name !== name);
+    setCart(filteredCart);
+  };
+
   return (
-    <CartContext.Provider value={{ addToCart, cart }}>
+    <CartContext.Provider value={{ addToCart, cart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );

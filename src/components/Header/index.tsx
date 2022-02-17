@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 import { useCartContext } from "../../contexts/CartContext";
 import "./header.scss";
@@ -16,19 +17,23 @@ const Header = () => {
         />
       </button>
       <div className="nav__links">
-        <Link to="/" className="nav__link fs-16">
+        <NavLink to="/" className="nav__link fs-16">
           Home
-        </Link>
-        <Link to="#" className="nav__link fs-16">
+        </NavLink>
+        <NavLink to="/pizzas" className="nav__link fs-16">
+          {" "}
+          Our Rush...
+        </NavLink>
+        <NavLink to="/about-us" className="nav__link fs-16">
           {" "}
           About us
-        </Link>
-        <Link to="#" className="nav__link fs-16">
+        </NavLink>
+        <NavLink to="/contact-us" className="nav__link fs-16">
           Contact us
-        </Link>
+        </NavLink>
       </div>
       <div className="flex flex__item-center cursor-pointer">
-        <div className="u-relative">
+        <button onClick={() => navigate("/cart")} className="u-relative">
           <div className="w-3 flex mr-2 cursor-pointer">
             <img
               src={require("../../assets/icons/cart-icon.svg").default}
@@ -40,7 +45,7 @@ const Header = () => {
           ) : (
             ""
           )}
-        </div>
+        </button>
         <div className="flex flex__item-center">
           <div className="w-3 flex">
             <img

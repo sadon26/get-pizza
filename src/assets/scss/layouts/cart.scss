@@ -1,0 +1,29 @@
+.cart {
+  &__item {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    padding: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__button {
+    padding: 7px 12px;
+    border-radius: 4px;
+    background: rgb(238, 238, 238);
+  }
+
+  &__proceed-btn {
+    width: 100%;
+    background: rgb(255, 149, 50);
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+}

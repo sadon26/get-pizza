@@ -1,0 +1,43 @@
+.pagination {
+  display: flex;
+
+  & .previous {
+    margin-right: 20px;
+  }
+
+  & .next {
+    margin-left: 20px;
+  }
+
+  & li {
+    cursor: pointer;
+  }
+
+  & li:not(.previous) {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgb(240, 240, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  & li:is(.next, .previous) {
+    width: auto;
+    height: auto;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & li.selected {
+    background: rgb(255, 149, 50);
+    color: #fff;
+  }
+}
